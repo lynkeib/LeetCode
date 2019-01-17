@@ -1,4 +1,5 @@
 #include <iostream>
+#include <typeinfo>
 
 using namespace std;
 
@@ -32,8 +33,12 @@ int main(){
     int nb = sizeof(b) / sizeof(*b);
     Bubblesort(a, na);
     printarray(a, na);
+    cout << a << endl;
+    cout << typeid(a).name() << endl;
     Bubblesort(b, nb);
     printarray(b, nb);
+    cout << b << endl;
+    cout << typeid(b).name() << endl;
     return 0;
 }
 
