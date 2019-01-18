@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		14F45FF021F0E79800CD3B0E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14F45FEF21F0E79800CD3B0E /* main.cpp */; };
+		14F4600321F134D500CD3B0E /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14F4600121F134D500CD3B0E /* Node.cpp */; };
+		14F4600621F1352E00CD3B0E /* Heap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14F4600421F1352E00CD3B0E /* Heap.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		14F45FEC21F0E79800CD3B0E /* HeapSort */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HeapSort; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F45FEF21F0E79800CD3B0E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		14F4600121F134D500CD3B0E /* Node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		14F4600221F134D500CD3B0E /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		14F4600421F1352E00CD3B0E /* Heap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Heap.cpp; sourceTree = "<group>"; };
+		14F4600521F1352E00CD3B0E /* Heap.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Heap.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				14F45FEF21F0E79800CD3B0E /* main.cpp */,
+				14F4600121F134D500CD3B0E /* Node.cpp */,
+				14F4600221F134D500CD3B0E /* Node.hpp */,
+				14F4600421F1352E00CD3B0E /* Heap.cpp */,
+				14F4600521F1352E00CD3B0E /* Heap.hpp */,
 			);
 			path = HeapSort;
 			sourceTree = "<group>";
@@ -118,7 +128,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F4600621F1352E00CD3B0E /* Heap.cpp in Sources */,
 				14F45FF021F0E79800CD3B0E /* main.cpp in Sources */,
+				14F4600321F134D500CD3B0E /* Node.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

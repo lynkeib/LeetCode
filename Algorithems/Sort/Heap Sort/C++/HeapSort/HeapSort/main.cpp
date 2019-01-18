@@ -1,33 +1,33 @@
 #include <iostream>
+#include "Node.hpp"
+#include "Heap.hpp"
 
 using namespace std;
 
+int main(){
+    Node a(0, 8);
+    Node b(1, 9);
+    Node c(2, 8);
+    Node d(3, 7);
+    Node e(4, 6);
+//    Node *heaptree = new Node[5]{a,b,c,d,e};
+//    Heap heap(5, heaptree);
+//    cout << heaptree << endl;
+//    cout << heap.getheaptree() << endl;
 
-
-
-class man{
-private:
-    int a;
-public:
-    int b;
-};
-
-class Node{
-private:
-    Node left_child();
-    Node right_child();
-    Node parent();
-    int index;
-    int value;
     
-public:
-    Node(int index, int value): index(0), value(0), left_child(NULL), right(NULL), parent(NULL){
-        index = index;
-        value = value;
+    int n = 10;
+    int value[10] = {8,14,10,16,7,9,3,2,4,1};
+    Node *heaptree = new Node[n];
+    for(int i = 0;i < n; i++){
+        heaptree[i] = Node(i, value[i]);
     };
-    ~Node();
-    Node getleft(){
-        return left_child;
-    };
+    Heap heap(n, heaptree);
+    heap.show();
     
-};
+    cout << "start swap" << endl;
+    
+    heap.swap(&heaptree[0], &heaptree[4]);
+        
+    return 0;
+}

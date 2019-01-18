@@ -35,6 +35,7 @@ int main(){
     printarray(a, na);
     cout << a << endl;
     cout << typeid(a).name() << endl;
+    cout << a[2] << endl;
     Bubblesort(b, nb);
     printarray(b, nb);
     cout << b << endl;
