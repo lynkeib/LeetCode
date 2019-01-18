@@ -12,6 +12,7 @@
 Heap::Heap(int cap, Node *heaplist){
     capacity = cap;
     heaptree = heaplist;
+    
 };
 
 Heap::~Heap(){};
@@ -30,6 +31,7 @@ void Heap::show(){
 
 //void Heap::maxheapify(int index){
 //    if(heaptree[index]){
+//        
 //
 //    }
 //}
