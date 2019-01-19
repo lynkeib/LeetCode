@@ -22,12 +22,22 @@ int main(){
     for(int i = 0;i < n; i++){
         heaptree[i] = Node(i, value[i]);
     };
+    
     Heap heap(n, heaptree);
     heap.show();
     
     cout << "start swap" << endl;
     
+    
+    
     heap.swap(&heaptree[0], &heaptree[4]);
+    
+    heap.assignnode();
+    
+    int uu;
+    uu = heap.getheaptree()[5].getleft()->getindex();
+    cout << uu << endl;
+    heap.show();
         
     return 0;
 }

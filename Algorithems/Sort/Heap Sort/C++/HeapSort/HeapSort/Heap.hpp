@@ -20,6 +20,7 @@ private:
 public:
     Heap(int cap, Node *heaplist);
     ~Heap();
+    void assignnode(void);
     Node *getheaptree(){return heaptree;}
     void swap(Node *a, Node *b);
     void show();
