@@ -27,7 +27,7 @@ class Solution {
                 }
             }
         }
-        return res; 
+        return res;
     }
 
     public int[] detectCycle(int N, int[][] edges, int[] skipEdge){
