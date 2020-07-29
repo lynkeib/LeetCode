@@ -23,6 +23,8 @@ class Solution {
             int mid = left + (right - left) / 2;
             if(sums[mid] == target){
                 return mid;
+
+
             }
             if(sums[mid] < target){
                 left = mid + 1;
