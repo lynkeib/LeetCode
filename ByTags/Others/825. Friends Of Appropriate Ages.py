@@ -18,3 +18,10 @@ class Solution(object):
                     if key == otherAge:
                         res -= value
         return res
+
+word = "1234"
+Tier = {}
+node = Tier
+for letter in word:
+    node = node.setdefault(letter, {})
+print(Tier)
