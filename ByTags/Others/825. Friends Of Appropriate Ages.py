@@ -18,3 +18,7 @@ class Solution(object):
                     if key == otherAge:
                         res -= value
         return res
+
+
+s = "12"
+print(s[2:])
