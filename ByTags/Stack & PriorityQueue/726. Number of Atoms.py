@@ -1,3 +1,51 @@
+# iterative:
+class Solution(object):
+    def countOfAtoms(self, formula):
+        """
+        :type formula: str
+        :rtype: str
+        """
+        counter = dict()
+        item = ""
+        stack = []
+        count, numberCount = 0, 0
+        currCount = 1
+
+        for c in formula[::-1]:
+            if c.isnumeric():
+                count += int(c) * (10 ** numberCount)
+                numberCount += 1
+            elif c == ")":
+                stack.append((count or 1))
+                currCount *= count
+                count = 0
+                numberCount = 0
+            elif c == "(":
+                currCount //= stack.pop()
+                count = 0
+                numberCount = 0
+            elif c.isupper():
+                item += c
+                thisItem = item[::-1]
+                if thisItem not in counter:
+                    counter[thisItem] = 0
+                counter[thisItem] += (count or 1) * currCount
+                item = ""
+                count = 0
+                numberCount = 0
+            elif c.islower():
+                item += c
+
+        res = ""
+        for key, value in sorted(counter.items()):
+            if value > 1:
+                res += key + str(value)
+            else:
+                res += key
+        return res
+
+
+# recursive: TLE
 class Solution(object):
     def countOfAtoms(self, formula):
         """
