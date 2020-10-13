@@ -19,3 +19,5 @@ class Solution(object):
         root.val = self.s
         self.convertBST(root.left)
         return root
+
+print("1234"[:-1])
