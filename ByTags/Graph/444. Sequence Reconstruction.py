@@ -25,3 +25,50 @@ class Solution(object):
             if pairs[i] != 1:
                 return False
         return True
+
+
+class Solution:
+    def sequenceReconstruction(self, org: List[int], seqs: List[List[int]]) -> bool:
+
+        # edge case
+        if not seqs: return False
+
+        # a. Initialize the graph and indegree
+        Graph = {}
+        inDegree = {}
+        for sequence in seqs:
+            for i in sequence:
+                inDegree[i] = 0
+                Graph[i] = []
+
+        # b. Build the graph and indegree
+        for sequece in seqs:
+            for i in range(1, len(sequece)):
+                parent, child = sequece[i - 1], sequece[i]
+                Graph[parent].append(child)
+                inDegree[child] += 1
+
+        if len(inDegree) != len(org): return False
+
+        # c. Find the source of the sequence
+        source = collections.deque()
+        for i in inDegree:
+            if inDegree[i] == 0:
+                source.append(i)
+
+        # d. Topological sorting for the calculation
+        res = []
+        while source:
+            max_len = len(source)
+            if max_len > 1:
+                return False
+            if org[len(res)] != source[0]:
+                return False
+            vertext = source.popleft()
+            res.append(vertext)
+            for child in Graph[vertext]:
+                inDegree[child] -= 1
+                if inDegree[child] == 0:
+                    source.append(child)
+
+        return len(res) == len(org)
